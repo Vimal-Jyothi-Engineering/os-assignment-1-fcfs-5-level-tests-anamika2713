@@ -10,7 +10,6 @@ int main() {
         scanf("%d %d %d", &pid[i], &at[i], &bt[i]);
     }
 
-    // Sort by arrival time
     for (int i = 0; i < n - 1; i++) {
         for (int j = i + 1; j < n; j++) {
             if (at[i] > at[j]) {
@@ -35,7 +34,6 @@ int main() {
     float total_wt = 0, total_tat = 0;
 
     for (int i = 0; i < n; i++) {
-
         if (current_time < at[i])
             current_time = at[i];
 
@@ -46,8 +44,6 @@ int main() {
         total_wt += wt[i];
         total_tat += tat[i];
     }
-
-    // EXACT FORMAT (NO EXTRA SPACES OR LINES)
 
     printf("Waiting Time: ");
     for (int i = 0; i < n; i++) {
