@@ -7,8 +7,9 @@ int main() {
     int at[n], bt[n], wt[n], tat[n];
     int pid[n];
 
+    // Read input like: P1 0 5
     for (int i = 0; i < n; i++) {
-        scanf("P%d %d %d", &pid[i], &at[i], &bt[i]);
+        scanf(" P%d %d %d", &pid[i], &at[i], &bt[i]);
     }
 
     // Sort by arrival time
@@ -36,7 +37,6 @@ int main() {
     float total_wt = 0, total_tat = 0;
 
     for (int i = 0; i < n; i++) {
-
         if (current_time < at[i])
             current_time = at[i];
 
